@@ -67,8 +67,6 @@ export { db, auth, real, ref, set, onValue, update, off };
 
 - React
 - Firebase (for backend services)
-- Material-UI (for UI components)
-- Redux (for state management)
 
 ## Contributors:
 
