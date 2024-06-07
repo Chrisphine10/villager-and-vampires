@@ -36,8 +36,6 @@ To run the Vampire Village React App locally, follow these steps:
 
 - React
 - Firebase (for backend services)
-- Material-UI (for UI components)
-- Redux (for state management)
 
 ## Contributors:
 
