@@ -13,7 +13,7 @@ const WelcomePage = ({ setPage }) => {
         <>
             <Container textAlign="center" sx={{
                 position: 'relative', // Added position relative
-                width: '20vw',
+                width: '80%',
                 minHeight: '60vh',
                 borderRadius: '50px',
                 display: 'flex',
