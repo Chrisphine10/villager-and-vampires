@@ -1,4 +1,3 @@
-// src/components/HomePage.js
 import React, { useState, useEffect } from 'react';
 import { Container, Button } from '@mui/material';
 import WelcomePage from './WelcomePage';
@@ -59,24 +58,25 @@ const HomePage = () => {
                 backgroundSize: 'cover',
                 backgroundPosition: 'center',
                 width: '100vw',
-                height: '100vh',
+                minHeight: '100vh',
                 display: 'flex',
                 flexDirection: 'column',
                 justifyContent: 'center',
                 alignItems: 'center',
-                FontFace: 'Play',
+                fontFamily: 'Play', // Changed from FontFace to fontFamily
+                padding: '20px', // Added padding for better spacing on smaller screens
             }}
         >
-            <div>Vampires and Villages</div>
+            <h1 style={{ textAlign: 'center' }}>Vampires and Villages</h1>
             {user ? renderPage() : <div variant="h2" align="center">Please Sign In</div>}
             <Button
                 sx={{
                     mt: 2,
-                    width: '200px',  // Adjust as necessary
+                    width: '200px',
                     backgroundImage: `url(${buttonBackground})`,
                     backgroundSize: 'cover',
                     backgroundPosition: 'center',
-                    color: 'red',  // Ensure text is visible
+                    color: 'red',
                     '&:hover': {
                         backgroundSize: 'cover',
                         backgroundPosition: 'center',

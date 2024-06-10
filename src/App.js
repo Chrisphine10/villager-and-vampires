@@ -16,6 +16,7 @@ const theme = createTheme({
     fontFamily: '"Play", cursive',
     h1: {
       color: '#ff1744',
+      fontWeight: 'bold',
     },
     h2: {
       color: '#d500f9',
