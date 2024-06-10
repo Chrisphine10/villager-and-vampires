@@ -9,6 +9,6 @@ body {
 }
 
 code {
-  font-family: 'Play', sans-serif;
-  /* Note: Correct syntax for font-family */
+  font-family: 'Play', monospace;
+  /* Use a monospace font for code */
 }

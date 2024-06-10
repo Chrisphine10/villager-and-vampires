@@ -1,6 +1,6 @@
 // src/components/HomePage.js
 import React, { useState, useEffect } from 'react';
-import { Container, Typography, Button } from '@mui/material';
+import { Container, Button } from '@mui/material';
 import WelcomePage from './WelcomePage';
 import HowToPlayPage from './HowToPlay';
 import HostGamePlay from './HostGamePlay';
@@ -12,8 +12,6 @@ import VotingPage from './Voting';
 import { useAuth } from '../contexts/AuthContext';
 import backgroundImage from '../assets/background.png'; // Use any cool background image
 import buttonBackground from '../assets/button.png';
-import ThreeDText from './helpers/ThreeDText';
-import { Canvas } from '@react-three/fiber';
 
 const HomePage = () => {
     const [page, setPage] = useState(''); // default page
@@ -66,12 +64,11 @@ const HomePage = () => {
                 flexDirection: 'column',
                 justifyContent: 'center',
                 alignItems: 'center',
+                FontFace: 'Play',
             }}
         >
-            <Canvas>
-                <ThreeDText text="Vampires and Villages" type="header" />
-            </Canvas>
-            {user ? renderPage() : <Typography variant="h2" align="center">Please Sign In</Typography>}
+            <div>Vampires and Villages</div>
+            {user ? renderPage() : <div variant="h2" align="center">Please Sign In</div>}
             <Button
                 sx={{
                     mt: 2,
@@ -89,10 +86,6 @@ const HomePage = () => {
             >
                 Back to Home
             </Button>
-
-            <Canvas>
-                <ThreeDText text="Normal Text" type="normal" />
-            </Canvas>
         </Container>
     );
 };

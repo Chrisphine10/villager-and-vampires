@@ -13,7 +13,7 @@ import 'react-toastify/dist/ReactToastify.css';
 
 const theme = createTheme({
   typography: {
-    fontFamily: '"Press Start 2P", cursive',
+    fontFamily: '"Play", cursive',
     h1: {
       color: '#ff1744',
     },
