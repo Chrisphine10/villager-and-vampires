@@ -10,7 +10,10 @@ import IDDisplay from './IDDisplay';
 import JoinGamePage from './JoinGame';
 import VotingPage from './Voting';
 import { useAuth } from '../contexts/AuthContext';
-import backgroundImage from '../assets/background-village.jpg'; // Use any cool background image
+import backgroundImage from '../assets/background.png'; // Use any cool background image
+import buttonBackground from '../assets/button.png';
+import ThreeDText from './helpers/ThreeDText';
+import { Canvas } from '@react-three/fiber';
 
 const HomePage = () => {
     const [page, setPage] = useState(''); // default page
@@ -57,6 +60,7 @@ const HomePage = () => {
                 backgroundImage: `url(${backgroundImage})`,
                 backgroundSize: 'cover',
                 backgroundPosition: 'center',
+                width: '100vw',
                 height: '100vh',
                 display: 'flex',
                 flexDirection: 'column',
@@ -64,17 +68,31 @@ const HomePage = () => {
                 alignItems: 'center',
             }}
         >
-            <Typography variant="h1" align="center" gutterBottom>
-                Vampires vs Villages
-            </Typography>
+            <Canvas>
+                <ThreeDText text="Vampires and Villages" type="header" />
+            </Canvas>
             {user ? renderPage() : <Typography variant="h2" align="center">Please Sign In</Typography>}
             <Button
-                variant="contained" color="primary"
-                sx={{ mt: 2 }}
+                sx={{
+                    mt: 2,
+                    width: '200px',  // Adjust as necessary
+                    backgroundImage: `url(${buttonBackground})`,
+                    backgroundSize: 'cover',
+                    backgroundPosition: 'center',
+                    color: 'red',  // Ensure text is visible
+                    '&:hover': {
+                        backgroundSize: 'cover',
+                        backgroundPosition: 'center',
+                    },
+                }}
                 onClick={() => setPage('welcome')}
             >
                 Back to Home
             </Button>
+
+            <Canvas>
+                <ThreeDText text="Normal Text" type="normal" />
+            </Canvas>
         </Container>
     );
 };

@@ -45,12 +45,7 @@ const HowToPlayPage = ({ setPage }) => {
                 </Typography>
                 {/* FAQs content goes here */}
             </TabPanel>
-            <Box mt={4} display="flex" justifyContent="center">
-                <Button variant="contained" color="primary" component={Link}
-                    onClick={() => setPage('welcome')}>
-                    Back to Home
-                </Button>
-            </Box>
+
         </Container>
     );
 };
