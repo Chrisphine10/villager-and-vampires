@@ -11,11 +11,16 @@ const WelcomePage = ({ setPage }) => {
     const secondaryColor = theme.palette.secondary.main;
     return (
         <>
+            {/* Content */}
+            <h1 variant="h1" style={{ color: titleColor, textAlign: 'center', zIndex: 1 }}> {/* Ensuring text is above overlay */}
+                Welcome to Timbuktu!
+            </h1>
+
             <Container textAlign="center" sx={{
                 position: 'relative', // Added position relative
-                width: '80%',
+                width: '90%',
                 minHeight: '60vh',
-                borderRadius: '50px',
+                borderRadius: '30px',
                 display: 'flex',
                 flexDirection: 'column',
                 justifyContent: 'center',
@@ -53,10 +58,6 @@ const WelcomePage = ({ setPage }) => {
                     }}
                 />
 
-                {/* Content */}
-                <h1 variant="h1" style={{ color: titleColor, textAlign: 'center', zIndex: 0 }}> {/* Ensuring text is above overlay */}
-                    Welcome to Timbuktu!
-                </h1>
 
                 <Button
                     variant="contained"

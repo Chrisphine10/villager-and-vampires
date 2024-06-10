@@ -10,5 +10,6 @@ body {
 
 code {
   font-family: 'Play', monospace;
+  font-size: 14px;
   /* Use a monospace font for code */
 }
