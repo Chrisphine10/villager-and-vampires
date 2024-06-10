@@ -52,7 +52,6 @@ const HomePage = () => {
 
     return (
         <Container
-            maxWidth="lg"
             sx={{
                 backgroundImage: `url(${backgroundImage})`,
                 backgroundSize: 'cover',
@@ -67,7 +66,6 @@ const HomePage = () => {
                 padding: '20px', // Added padding for better spacing on smaller screens
             }}
         >
-            <h1 style={{ textAlign: 'center' }}>Vampires and Villages</h1>
             {user ? renderPage() : <div variant="h2" align="center">Please Sign In</div>}
             <Button
                 sx={{
